@@ -5,10 +5,7 @@ import axios from "axios";
 const options = {
   method: "GET",
   url: "https://f1-live-motorsport-data.p.rapidapi.com/session/2757",
-  headers: {
-    "X-RapidAPI-Key": "eedb734828mshf1f5ca824434adcp1d425fjsnda2bca104f40",
-    "X-RapidAPI-Host": "f1-live-motorsport-data.p.rapidapi.com",
-  },
+  headers: {},
 };
 
 axios
