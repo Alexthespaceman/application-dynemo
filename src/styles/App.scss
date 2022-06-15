@@ -1,6 +1,13 @@
+@import "./global/variables.scss";
+@import "./components/cards.scss";
+
 .App {
-  background-color: aqua;
-  height: 50%;
-  width: 50%;
+  background-color: $colorAccent1;
+  height: 100%;
+  width: 100%;
   position: relative;
+}
+
+body {
+  background-color: yellow;
 }

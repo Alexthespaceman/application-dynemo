@@ -1,0 +1,10 @@
+.main-box {
+  border: red 1px solid;
+  width: 100%;
+  height: 100%;
+
+  .small-box {
+    border: green 1px solid;
+    width: 33%;
+  }
+}
