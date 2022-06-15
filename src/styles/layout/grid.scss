@@ -1,0 +1,456 @@
+@-ms-viewport {
+  width: device-width;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints);
+@include _assert-ascending($container-max-widths, "$container-max-widths");
+
+@media (max-width: 1180px) {
+  //breakpoint var here
+  .body-noscroll {
+    overflow: hidden;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.grid-wrapper .clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.grid-wrapper .visible {
+  visibility: visible !important;
+}
+
+.grid-wrapper .invisible {
+  visibility: hidden !important;
+}
+
+.grid-wrapper .hidden-xs-up {
+  display: none !important;
+}
+
+@media (max-width: (map-get($grid-breakpoints, "xs") - 0.2px)) {
+  .grid-wrapper .hidden-xs-down {
+    display: none !important;
+  }
+}
+
+@media (min-width: map-get($grid-breakpoints, "sm")) {
+  .grid-wrapper .hidden-sm-up {
+    display: none !important;
+  }
+}
+
+@media (max-width: (map-get($grid-breakpoints, "sm") - 0.2px)) {
+  .grid-wrapper .hidden-sm-down {
+    display: none !important;
+  }
+}
+
+@media (min-width: map-get($grid-breakpoints, "md")) {
+  .grid-wrapper .hidden-md-up {
+    display: none !important;
+  }
+}
+
+@media (max-width: (map-get($grid-breakpoints, "md") - 0.2px)) {
+  .grid-wrapper .hidden-md-down {
+    display: none !important;
+  }
+}
+
+@media (min-width: map-get($grid-breakpoints, "lg")) {
+  .grid-wrapper .hidden-lg-up {
+    display: none !important;
+  }
+}
+
+@media (max-width: (map-get($grid-breakpoints, "lg") - 0.2px)) {
+  .grid-wrapper .hidden-lg-down {
+    display: none !important;
+  }
+}
+
+@media (min-width: map-get($grid-breakpoints, "xl")) {
+  .grid-wrapper .hidden-xl-up {
+    display: none !important;
+  }
+}
+
+.grid-wrapper .hidden-xl-down {
+  display: none !important;
+}
+
+.grid-wrapper .visible-print-block {
+  display: none !important;
+}
+
+@media print {
+  .grid-wrapper .visible-print-block {
+    display: block !important;
+  }
+}
+
+.grid-wrapper .visible-print-inline {
+  display: none !important;
+}
+
+@media print {
+  .grid-wrapper .visible-print-inline {
+    display: inline !important;
+  }
+}
+
+.grid-wrapper .visible-print-inline-block {
+  display: none !important;
+}
+
+@media print {
+  .grid-wrapper .visible-print-inline-block {
+    display: inline-block !important;
+  }
+}
+
+@media print {
+  .grid-wrapper .hidden-print {
+    display: none !important;
+  }
+}
+
+.grid-wrapper .container {
+  width: 100%;
+  padding-right: $grid-gutter-width;
+  padding-left: $grid-gutter-width;
+  margin-right: auto;
+  margin-left: auto;
+  @media (max-width: map-get($grid-breakpoints, "md")) {
+    padding-right: $grid-gutter-width / 2;
+    padding-left: $grid-gutter-width / 2;
+  }
+}
+
+@media (min-width: map-get($grid-breakpoints, "sm")) {
+  .grid-wrapper .container {
+    max-width: map-get($container-max-widths, "sm");
+  }
+}
+
+@media (min-width: map-get($grid-breakpoints, "md")) {
+  .grid-wrapper .container {
+    max-width: map-get($container-max-widths, "md");
+  }
+}
+
+@media (min-width: map-get($grid-breakpoints, "lg")) {
+  .grid-wrapper .container {
+    max-width: map-get($container-max-widths, "lg");
+  }
+}
+
+@media (min-width: map-get($grid-breakpoints, "xl")) {
+  .grid-wrapper .container {
+    max-width: map-get($container-max-widths, "xl");
+  }
+}
+
+.grid-wrapper .container-fluid {
+  width: 100%;
+  padding-right: $grid-gutter-width;
+  padding-left: $grid-gutter-width;
+  margin-right: auto;
+  margin-left: auto;
+  @media (max-width: 768px) {
+    padding-right: $grid-gutter-width / 2;
+    padding-left: $grid-gutter-width / 2;
+  }
+}
+
+.grid-wrapper .row {
+  @include flex();
+  margin-right: $grid-gutter-width;
+  margin-left: $grid-gutter-width;
+  @media (max-width: 768px) {
+    padding-right: $grid-gutter-width / 2;
+    padding-left: $grid-gutter-width / 2;
+  }
+}
+
+.grid-wrapper .no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.grid-wrapper .no-gutters > .col,
+.grid-wrapper .no-gutters > [class*="col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.grid-wrapper [class^="col"] {
+  position: relative;
+  width: 100%;
+  padding-right: $grid-gutter-width;
+  padding-left: $grid-gutter-width;
+  @media (max-width: 768px) {
+    padding-right: $grid-gutter-width / 2;
+    padding-left: $grid-gutter-width / 2;
+  }
+}
+
+.grid-wrapper .col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.grid-wrapper .col-auto {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 100%;
+}
+
+@for $i from 1 through $grid-columns {
+  .grid-wrapper .col-#{$i} {
+    flex: 0 0 ((100 / $grid-columns) * $i) * 1%;
+    max-width: ((100 / $grid-columns) * $i) * 1%;
+  }
+
+  .grid-wrapper .order-#{$i} {
+    order: #{$i};
+  }
+
+  .grid-wrapper .offset-#{$i} {
+    margin-left: ((100 / $grid-columns) * $i) * 1%;
+  }
+}
+
+.grid-wrapper .order-first {
+  order: -1;
+}
+
+.grid-wrapper .order-last {
+  order: $grid-columns + 1;
+}
+
+@media (min-width: 0) {
+  .grid-wrapper .col-xs {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+
+  .grid-wrapper .col-xs-auto {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+  }
+
+  @for $i from 1 through ($grid-columns) {
+    .grid-wrapper .col-xs-#{$i} {
+      flex: 0 0 (100 / ($grid-columns) * $i) * 1%;
+      max-width: (100 / ($grid-columns) * $i) * 1%;
+    }
+
+    .grid-wrapper .order-xs-#{$i} {
+      order: #{$i};
+    }
+
+    .grid-wrapper .offset-xs-#{$i} {
+      margin-left: (100 / ($grid-columns) * $i) * 1%;
+    }
+  }
+
+  .grid-wrapper .order-xs-first {
+    order: -1;
+  }
+
+  .grid-wrapper .order-xs-last {
+    order: $grid-columns + 1;
+  }
+
+  .grid-wrapper .offset-xs-0 {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: map-get($grid-breakpoints, "sm")) {
+  .grid-wrapper .col-sm {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+
+  .grid-wrapper .col-sm-auto {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+  }
+
+  @for $i from 1 through ($grid-columns / 2) {
+    .grid-wrapper .col-sm-#{$i} {
+      flex: 0 0 ((100 / ($grid-columns / 2)) * $i) * 1%;
+      max-width: ((100 / ($grid-columns / 2)) * $i) * 1%;
+    }
+
+    .grid-wrapper .order-sm-#{$i} {
+      order: #{$i};
+    }
+
+    .grid-wrapper .offset-sm-#{$i} {
+      margin-left: ((100 / ($grid-columns / 2)) * $i) * 1%;
+    }
+  }
+
+  .grid-wrapper .order-sm-first {
+    order: -1;
+  }
+
+  .grid-wrapper .order-sm-last {
+    order: ($grid-columns / 2) + 1;
+  }
+
+  .grid-wrapper .offset-sm-0 {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: map-get($grid-breakpoints, "md")) {
+  .grid-wrapper .col-md {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+
+  .grid-wrapper .col-md-auto {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+  }
+
+  @for $i from 1 through $grid-columns {
+    .grid-wrapper .col-md-#{$i} {
+      flex: 0 0 ((100 / $grid-columns) * $i) * 1%;
+      max-width: ((100 / $grid-columns) * $i) * 1%;
+    }
+
+    .grid-wrapper .order-md-#{$i} {
+      order: #{$i};
+    }
+
+    .grid-wrapper .offset-md-#{$i} {
+      margin-left: ((100 / $grid-columns) * $i) * 1%;
+    }
+  }
+
+  .grid-wrapper .order-md-first {
+    order: -1;
+  }
+
+  .grid-wrapper .order-md-last {
+    order: $grid-columns + 1;
+  }
+
+  .grid-wrapper .offset-md-0 {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: map-get($grid-breakpoints, "lg")) {
+  .grid-wrapper .col-lg {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+
+  .grid-wrapper .col-lg-auto {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+  }
+
+  @for $i from 1 through $grid-columns {
+    .grid-wrapper .col-lg-#{$i} {
+      flex: 0 0 ((100 / $grid-columns) * $i) * 1%;
+      max-width: ((100 / $grid-columns) * $i) * 1%;
+    }
+
+    .grid-wrapper .order-lg-#{$i} {
+      order: #{$i};
+    }
+
+    .grid-wrapper .offset-lg-#{$i} {
+      margin-left: ((100 / $grid-columns) * $i) * 1%;
+    }
+  }
+
+  .grid-wrapper .order-lg-first {
+    order: -1;
+  }
+
+  .grid-wrapper .order-lg-last {
+    order: $grid-columns + 1;
+  }
+
+  .grid-wrapper .offset-lg-0 {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: map-get($grid-breakpoints, "xl")) {
+  .grid-wrapper .col-xl {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+
+  .grid-wrapper .col-xl-auto {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+  }
+
+  @for $i from 1 through $grid-columns {
+    .grid-wrapper .col-xl-#{$i} {
+      flex: 0 0 ((100 / $grid-columns) * $i) * 1%;
+      max-width: ((100 / $grid-columns) * $i) * 1%;
+    }
+
+    .grid-wrapper .order-xl-#{$i} {
+      order: #{$i};
+    }
+
+    .grid-wrapper .offset-xl-#{$i} {
+      margin-left: ((100 / $grid-columns) * $i) * 1%;
+    }
+  }
+
+  .grid-wrapper .order-xl-first {
+    order: -1;
+  }
+
+  .grid-wrapper .order-xl-last {
+    order: $grid-columns + 1;
+  }
+
+  .grid-wrapper .offset-xl-0 {
+    margin-left: 0;
+  }
+}
+
+.grid-wrapper .img-fluid {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+}

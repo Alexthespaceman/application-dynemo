@@ -1,0 +1,209 @@
+// ====================================================================================
+// Variables
+// ====================================================================================
+
+// Brand Colors
+
+$colorAccent1: #d24719;
+$colorAccent2: #f8efe0;
+$colorAccent3: #032240;
+$colorAccent4: #f7f7f7;
+$colorAccent5: #efefef;
+$colorAccent6: #19192b;
+$colorAccent7: #0b6027;
+$colorAccent8: #cfcee2;
+
+// Form Colors
+
+$formSubmitBackgroundColour: $colorAccent7;
+
+// Interface Colors
+
+$colorInterfaceBeige: beige;
+
+// Descriptive Colors
+
+$color-white: #fff;
+$color-black: #000;
+$color-grey: #c0c0c0;
+$color-grey-lighter: #eaeaea;
+$color-grey-darker: #9f9f9f;
+$color-grey-darkest: #545454;
+
+$serenade: red;
+$light-grey: grey;
+$orange: orange;
+
+// Button colours
+
+$buttonPrimaryBackgroundColour: $colorAccent3;
+$buttonPrimaryBackgroundColourHover: #2f2e55;
+$buttonPrimaryBackgroundBorderColourHover: #9999a9;
+$buttonPrimaryTextColour: $color-white;
+$buttonSecondaryBackgroundColour: $colorAccent1;
+$buttonSecondaryBackgroundColourHover: #e65b2c;
+$buttonSecondaryBackgroundBorderColourHover: #edb5a3;
+$buttonSecondaryTextColour: $color-white;
+$buttonTertiaryBackgroundColour: $color-white;
+$buttonTertiaryBackgroundColourHover: transparent;
+$buttonTertiaryBackgroundBorderColour: $colorAccent3;
+$buttonTertiaryBackgroundBorderColourHover: $colorAccent3;
+$buttonTertiaryTextColour: $colorAccent3;
+$buttonQuaternaryBackgroundColour: transparent;
+$buttonQuaternaryTextColour: $colorAccent1;
+$buttonQuaternaryTextColourHover: #e65b2c;
+
+// Component Background Colours
+
+$ComponentBackgroundDefault: $color-white;
+$ComponentBackgroundPrimary: $colorAccent2;
+$ComponentBackgroundSecondary: $colorAccent3;
+
+// Component Borders
+
+$componentBorderRadius: 50%;
+
+// Typography Colours
+
+$colorTypographyDefault: $colorAccent3;
+
+// Validation Colours
+
+$color-success: #0b6027;
+$color-error: #c81100;
+$color-attention: #195fd2;
+$color-warning: #f4b400;
+
+// Sticky Banner
+
+$stickyBannerBackground: $color-grey-lighter;
+$stickyBannerShadow: $color-grey;
+$stickyBannerButtonBackgroundColour: #2f2e55;
+
+// Footer
+
+$copyrightBorderTop: $colorAccent6;
+
+// UI Colors
+
+$ui-colors: (
+  "default": $colorAccent1,
+  "success": $colorAccent7,
+  "warning": $color-warning,
+  "error": $color-error,
+  "info": $colorAccent3,
+);
+
+// Font
+
+$primaryFont: "Nunito Sans", Verdana, sans-serif;
+
+// Font sizes
+
+$fontSize: (
+  "PrimaryTitle": 2.625rem,
+  "PrimaryTitleResponsiveMd": 2rem,
+  "PrimaryTitleResponsiveSm": 1.75rem,
+  "PrimaryTitlePrint": 31pt,
+  "SecondaryTitle": 2rem,
+  "SecondaryTitleResponsiveMd": 1.75rem,
+  "SecondaryTitleResponsiveSm": 1.625rem,
+  "SecondaryTitlePrint": 23pt,
+  "TertiaryTitle": 1.75rem,
+  "TertiaryTitleResponsiveMd": 1.625rem,
+  "TertiaryTitleResponsiveSm": 1.5rem,
+  "TertiaryTitlePrint": 20pt,
+  "QuaternaryTitle": 1.5rem,
+  "QuaternaryTitleResponsiveMd": 1.5rem,
+  "QuaternaryTitleResponsiveSm": 1.375rem,
+  "QuaternaryTitlePrint": 17pt,
+  "QuinaryTitle": 1.375rem,
+  "QuinaryTitleResponsiveMd": 1.275rem,
+  "QuinaryTitleResponsiveSm": 1.275rem,
+  "QuinaryTitlePrint": 16pt,
+  "SenaryTitle": 1rem,
+  "SenaryTitleResponsiveMd": 0.8rem,
+  "SenaryTitleResponsiveSm": 0.8rem,
+  "SenaryTitlePrint": 12pt,
+  "PrimaryContent": 1.25rem,
+  "PrimaryContentResponsive": 1.125rem,
+  "PrimaryContentPrint": 12pt,
+);
+
+$lineHeight: (
+  "PrimaryTitle": 1.2,
+  "PrimaryTitleResponsive": 1.2,
+  "SecondaryTitle": 1.3,
+  "SecondaryTitleResponsive": 1.3,
+  "TertiaryTitle": 1.3,
+  "TertiaryTitleResponsive": 1.3,
+  "QuaternaryTitle": 1.3,
+  "QuaternaryTitleResponsive": 1.3,
+  "QuinaryTitle": 1.3,
+  "QuinaryTitleResponsive": 1.3,
+  "SenaryTitle": 1.4,
+  "SenaryTitleResponsive": 1.4,
+  "PrimaryContent": 1.4,
+  "PrimaryContentResponsive": 1.4,
+);
+
+$fontWeightLight: 300;
+$fontWeightRegular: 400;
+$fontWeightSemiBold: 600;
+$fontWeightBold: 700;
+
+$disabled-font: red;
+
+// Breakpoints
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 599px,
+  md: 899px,
+  lg: 1008px,
+  xl: 1280px,
+) !default;
+
+$extraSmall: 455px;
+$mq-xsmall: 480px;
+$small: 600px;
+$mq-small: 660px;
+$medium: 820px;
+$medium-container-width: 920px;
+$mq-medium: 960px;
+$large: 1171px;
+$large-container-width: 1280px;
+
+$container-width: 1000px;
+$componentTabletBreakpoint: 1180px;
+
+$print-orientation: (
+  aut: auto,
+  port: portrait,
+  land: landscape,
+) !default;
+
+// Grid containers
+
+$container-max-widths: (
+  sm: 100%,
+  md: 899px,
+  lg: 1008px,
+  xl: 1280px,
+) !default;
+
+// Grid columns
+
+$grid-columns: 12 !default;
+$grid-gutter-width: 8px !default;
+
+// z-index Setup
+
+$zindex-header: 500 !default;
+$zindex-dropdown: 1000 !default;
+$zindex-sticky: 1020 !default;
+$zindex-fixed: 1030 !default;
+$zindex-modal-backdrop: 1040 !default;
+$zindex-modal: 1050 !default;
+$zindex-popover: 1060 !default;
+$zindex-tooltip: 1070 !default;

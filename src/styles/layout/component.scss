@@ -1,0 +1,101 @@
+.component {
+  padding: 2rem 0;
+
+  &--top-padding-default {
+    padding-top: 2rem;
+  }
+
+  &--bottom-padding-default {
+    padding-bottom: 2rem;
+  }
+
+  &--top-padding-condensed {
+    padding-top: 1rem;
+  }
+
+  &--bottom-padding-condensed {
+    padding-bottom: 1rem;
+  }
+
+  &--top-padding-expanded {
+    padding-top: 4rem;
+  }
+
+  &--bottom-padding-expanded {
+    padding-bottom: 4rem;
+  }
+
+  &--top-padding-none {
+    padding-top: 0;
+  }
+
+  &--bottom-padding-none {
+    padding-bottom: 0;
+  }
+
+  &--background-primary {
+    background-color: $colorAccent2;
+  }
+
+  &--background-secondary {
+    background-color: $colorAccent4;
+  }
+
+  &--background-tertiary {
+    background-color: $colorAccent6;
+    color: $color-white;
+
+    ul li::before {
+      border-color: inherit;
+    }
+  }
+
+  &--background-quaternary {
+    background-color: $colorAccent1;
+    color: $color-white;
+
+    ul li::before {
+      border-color: inherit;
+    }
+  }
+
+  &__title {
+    @extend h1;
+    line-height: 3rem;
+    font-weight: $fontWeightBold;
+    margin-bottom: 1.5rem;
+    @include media-breakpoint-down(lg) {
+      line-height: 2.6rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__subtitle {
+    @extend h2;
+    line-height: 3.1rem;
+    font-weight: $fontWeightSemiBold;
+    margin-bottom: 0.5em;
+    @include media-breakpoint-down(lg) {
+      line-height: 2.15rem;
+    }
+  }
+
+  &__pretitle {
+    margin-bottom: 1em;
+    color: $colorAccent1;
+  }
+
+  &__description {
+    margin-bottom: 0.5em;
+  }
+
+  &__pretitle,
+  &__description {
+    font-weight: $fontWeightSemiBold;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    @include media-breakpoint-down(lg) {
+      font-size: 1.3rem;
+    }
+  }
+}
