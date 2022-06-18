@@ -1,11 +1,12 @@
 import React from "react";
+import Card from "../sub-components/card";
 
 function Cards() {
   return (
     <div className="main-box">
-      <div className="small-box"></div>
-      <div className="small-box"></div>
-      <div className="small-box"></div>
+      <Card />
+      <Card />
+      <Card />
     </div>
   );
 }
