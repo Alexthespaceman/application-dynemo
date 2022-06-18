@@ -1,0 +1,11 @@
+.small-box {
+  border: green 1px solid;
+  @include media-breakpoint-up(sm) {
+    height: 100%;
+  }
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  border-radius: 10px;
+  margin: 10px;
+}

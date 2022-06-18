@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../sub-components/card";
+import Card from "../sub-components/Card";
 
 function Cards() {
   return (
