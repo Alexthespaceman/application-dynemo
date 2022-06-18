@@ -1,6 +1,6 @@
 import React from "react";
 import Cards from "./js/components/cards";
-import "./styles/App.scss";
+import "./styles/page.index.scss";
 
 function App() {
   // useEffect(() => {
