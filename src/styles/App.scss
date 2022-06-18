@@ -1,13 +1,8 @@
 @import "./global/variables.scss";
 @import "./components/cards.scss";
 
-.App {
-  background-color: $colorAccent1;
-  height: 100%;
-  width: 100%;
-  position: relative;
-}
-
+.App,
 body {
-  background-color: yellow;
+  height: 100vh;
+  // border: violet 2px solid;
 }

@@ -60,7 +60,7 @@
   }
 
   &__title {
-    @extend h1;
+    // @extend h1;
     line-height: 3rem;
     font-weight: $fontWeightBold;
     margin-bottom: 1.5rem;
@@ -71,7 +71,7 @@
   }
 
   &__subtitle {
-    @extend h2;
+    // @extend h2;
     line-height: 3.1rem;
     font-weight: $fontWeightSemiBold;
     margin-bottom: 0.5em;

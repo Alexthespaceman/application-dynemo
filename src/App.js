@@ -1,5 +1,5 @@
 import React from "react";
-import Cards from "./components/cards";
+import Cards from "./js/components/cards";
 import "./styles/App.scss";
 
 function App() {
@@ -11,6 +11,7 @@ function App() {
 
   return (
     <div className="App">
+      <Cards />
       <Cards />
     </div>
   );
