@@ -4,7 +4,13 @@
   background-color: lightblue;
 }
 .menu {
-  width: 30%;
+  width: 70%;
+  @include media-breakpoint-up(sm) {
+    width: 50%;
+  }
+  @include media-breakpoint-up(md) {
+    width: 35%;
+  }
   height: 100%;
   background-color: red;
   transition: width 1s;
