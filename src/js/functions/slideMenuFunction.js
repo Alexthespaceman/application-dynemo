@@ -1,11 +1,15 @@
 function slideMenu() {
   let menu = document.getElementById("menu");
-  console.log(menu);
+  let nested = document.getElementById("nested");
   if (menu.className === "menu") {
-    return (menu.className = "menuHidden");
+    let one = (nested.className = "not-nested");
+    let two = (menu.className = "menuHidden");
+    return { one, two };
   }
   if (menu.className === "menuHidden") {
-    return (menu.className = "menu");
+    let three = (nested.className = "nested");
+    let four = (menu.className = "menu");
+    return { three, four };
   }
 }
 

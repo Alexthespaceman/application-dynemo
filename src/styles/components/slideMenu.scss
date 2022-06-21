@@ -11,13 +11,16 @@
 }
 
 .menuHidden {
-  width: 0;
+  width: 5%;
   height: 100%;
   background-color: red;
   transition: width 1s;
-  .item-container {
-    width: 0;
-    transition: width 1s;
-    transition: display 1s;
-  }
+}
+
+.nested {
+  display: contents;
+}
+
+.not-nested {
+  display: none;
 }
